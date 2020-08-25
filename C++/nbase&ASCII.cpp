@@ -26,12 +26,13 @@ public:
             int oct;
             cout << "请输入" << endl;
             cin >> oct;
-            cout << "0x";
+            cout << "0";
             cout << std::oct << oct << endl;
         }else if(3==tmpNum){
             int hex;
             cout << "请输入" << endl;
             cin >> hex;
+	    cout << "0x";
             cout << std::hex << hex << endl;
         }
     }
