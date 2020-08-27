@@ -1,4 +1,5 @@
 #include <iostream>
+#include "ctime"
 #include "unistd.h"
 #include "TimerTask.h"
 #define TASK_TIMES 5    //执行次数
@@ -10,7 +11,9 @@ void TimerTask::setTask(){
     cout << "任务开始" << endl;
     int second = TASK_PERIOD*1000000;
     while (run_index!=TASK_TIMES){
-        cout << run_index << endl;
+        time_t now = time(0);
+        char* date = ctime(&now);
+        cout << date;
         usleep(second);
         run_index+=1;
     }
