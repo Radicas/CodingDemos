@@ -80,6 +80,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/mybogames/CodingDemos/C++/TimerTaskDemo/TimerTask.h">
+			<Option target="TimerTaskDemo"/>
+		</Unit>
 		<Unit filename="/Users/mybogames/CodingDemos/C++/TimerTaskDemo/main.cpp">
 			<Option target="TimerTaskDemo"/>
 		</Unit>
