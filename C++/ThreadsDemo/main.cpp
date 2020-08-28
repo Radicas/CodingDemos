@@ -1,4 +1,5 @@
 #include<iostream>
+#include "map"
 #include<vector>
 using namespace std;
 class Solution {
@@ -73,11 +74,30 @@ public:
         }
     }
 
+    int romanToInt(string s) {
 
+//        I V X  L  C   D   M    IV IX XL XC CD  CM
+//        1 5 10 50 100 500 1000 4  9  40 90 400 900
+        char romanChar[] = {};
+        strcpy(romanChar,s.c_str());
+        int len = strlen(romanChar);
+        if(len==1){
+            cout << romanChar[0];
+        }
+        for(int i=0;i<len-1;i++){
+            cout << romanChar[i];
+            cout << romanChar[i+1] << endl;
+        }
+        int num;
+
+        return num;
+    }
 };
 
 int main(){
     Solution solution;
+    string s = "XC";
+    solution.romanToInt(s);
 /*
  * 判断回文数***********************************
  */
