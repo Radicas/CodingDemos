@@ -75,29 +75,34 @@ public:
     }
 
     int romanToInt(string s) {
-
-//        I V X  L  C   D   M    IV IX XL XC CD  CM
-//        1 5 10 50 100 500 1000 4  9  40 90 400 900
-        char romanChar[] = {};
-        strcpy(romanChar,s.c_str());
-        int len = strlen(romanChar);
-        if(len==1){
-            cout << romanChar[0];
+        int result = 0;
+        map<char,int> map_test = {
+                {'I',1},
+                {'V',5},
+                {'X',10},
+                {'L',50},
+                {'C',100},
+                {'D',500},
+                {'M',1000}
+        };
+        for(int i=0;i<s.length();i++){
+            if (map_test[s[i]]>=map_test[s[i+1]]){
+                result += map_test[s[i]];
+            }else{
+                result -= map_test[s[i]];
+            }
         }
-        for(int i=0;i<len-1;i++){
-            cout << romanChar[i];
-            cout << romanChar[i+1] << endl;
-        }
-        int num;
-
-        return num;
+        return result;
     }
 };
 
 int main(){
     Solution solution;
-    string s = "XC";
-    solution.romanToInt(s);
+/*
+ * 罗马数字转阿拉伯数字**************************
+ */
+//    int i = solution.romanToInt("III");
+//    std::cout << i;
 /*
  * 判断回文数***********************************
  */
