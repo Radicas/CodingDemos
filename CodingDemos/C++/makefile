@@ -1,0 +1,2 @@
+Sort:
+	g++ Sort.cpp
