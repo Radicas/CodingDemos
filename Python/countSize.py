@@ -1,10 +1,9 @@
-
 import os
 '''
 输入路径，递归判断是否文件，是文件则判断文件大小，以key、value的形式存放与字典；按value排序。
 '''
 
-PATH = "/Users/mybogames/ab-blast"
+PATH = "/Users/zhupeng/Work/Workspace/SVN/07_zp/rededa-qt"
 dict = {}
 
 def isFile(path):
@@ -13,7 +12,7 @@ def isFile(path):
         childPath = path+'/'+childName
         if os.path.isfile(childPath):
             size = os.path.getsize(childPath)
-            dict[childName] = size#convertSize(size)
+            dict[childName] = size #convertSize(size)
         elif os.path.isdir(childPath):
             isFile(childPath)
 
@@ -33,6 +32,7 @@ def listDic():
         v = convertSize(v)
         print(k,v)
     print("一共"+str(len(dict))+"个文件")
+
     #*********************************************************************************#
     # sortKey = sorted(dict.keys())#按key排序
     # for k in sortKey:
